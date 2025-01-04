@@ -12,6 +12,8 @@
 Thumbs.db
 UserInterfaceState.xcuserstate
 $RECYCLE.BIN/
+frontend/node_modules/
+backend/node_modules/
 
 *.log
 log.txt

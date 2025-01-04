@@ -73,7 +73,6 @@ import { ref } from "vue";
 
 const authService = new AuthService();
 const loading = ref(false);
-// Schema de validação
 const schema = yup.object().shape({
   email: yup.string().required("Campo obrigatório").email("Email inválido"),
   password: yup
@@ -88,8 +87,6 @@ const { handleSubmit, errors, defineInputBinds } = useForm({
   validationSchema: schema,
 });
 
-// const [emailField] = defineField("email");
-// const [passwordField] = defineField("password");
 async function presentToast({
   message,
   color,
@@ -108,6 +105,7 @@ async function presentToast({
 }
 const emailField = defineInputBinds("email");
 const passwordField = defineInputBinds("password");
+
 const onSubmit = async (values: { email: string; password: string }) => {
   try {
     loading.value = true;

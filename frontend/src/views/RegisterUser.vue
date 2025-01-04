@@ -122,7 +122,6 @@ import { toastController } from "@ionic/vue";
 import { ref } from "vue";
 const authService = new AuthService();
 
-// Schema de validação
 const schema = yup.object().shape({
   name: yup.string().required("Campo obrigatório"),
   email: yup.string().required("Campo obrigatório").email("Email inválido"),
